@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %} 
+
+
+<h1>
+Hey {{ request.user }}!
+</h1>
+<br>
+
+<ul>
+{% for note in queryset %}
+   
+    <li>
+        {{ note.title }}
+        <br>
+        Created on - {{ note.created_on }}
+    </li>
+{% endfor %}
+</ul>
+
+
+{% endblock %}
