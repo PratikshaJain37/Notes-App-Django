@@ -8,16 +8,10 @@ Hey {{ request.user }}!
 </h1>
 <br>
 
-<ul>
-{% for note in queryset %}
-   
-    <li>
-        {{ note.title }}
-        <br>
-        Created on - {{ note.created_on }}
-    </li>
+{% for instance in object_list %}
+     <p>{{ instance.id }} - <a href='{{ instance.get_absolute_url }}'>{{ instance.title }}</a></p>
 {% endfor %}
-</ul>
+
 
 
 {% endblock %}
