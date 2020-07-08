@@ -8,8 +8,8 @@ Hey {{ request.user }}!
 </h1>
 <br>
 
-{% for instance in object_list %}
-     <p>{{ instance.id }} - <a href='{{ instance.get_absolute_url }}'>{{ instance.title }}</a></p>
+{% for note in object_list %}
+     <p>{{ note.id }} - <a href='{{ note.get_absolute_url }}'>{{ note.title }}</a></p>
 {% endfor %}
 
 

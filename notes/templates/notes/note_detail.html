@@ -4,8 +4,31 @@
 
 <br>
 <h1> {{ note.title }} </h1>
+<hr>
 
 <br>
 {{ note.content | safe }}
+<br>
+<hr>
+
+Tags: 
+<div class="badge badge-pil"><code ><nobr>{{ note.tags }}</nobr></code></div>
+
+<hr>
+
+<a href='update/'>
+    <button> Update </button>
+</a>
+
+<a href='delete/'>
+    <button> Delete </button>
+</a>
+
+<br>
+<br>
+
+<a href='../../notes/'>
+    << Back Home 
+</a>
 
 {% endblock %}
