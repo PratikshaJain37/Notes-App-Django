@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %} 
-
+<br>
 <h1> Create A Note: </h1>
 <br>
 <form action='' method='POST'>
 {% csrf_token %}
+    {{ form.media }}
     {{ form.as_p }}
     <input type='submit' value='Save' />
 </form>

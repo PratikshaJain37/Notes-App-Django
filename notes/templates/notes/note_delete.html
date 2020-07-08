@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %} 
-
+<br>
 <form action='' method='POST'>
 {% csrf_token %}
-    Do you want to delete the note "{{ object.title }}"? 
-    <input type='submit' value='Yes' />
-    <a href='../'> Cancel </a>
-</form>f
+    
+    <p> Do you want to delete the note "{{ object.title }}"? 
+    </p>
+
+    <button type='submit' value='Yes'> Yes </button>
+    <button onclick="../"> Cancel </button>
+    
+</form>
 
 {% endblock %}

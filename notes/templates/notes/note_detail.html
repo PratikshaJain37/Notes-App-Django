@@ -2,8 +2,10 @@
 
 {% block content %} 
 
-{{ note.title }}
 <br>
-{{ note.content }}
+<h1> {{ note.title }} </h1>
+
+<br>
+{{ note.content | safe }}
 
 {% endblock %}
