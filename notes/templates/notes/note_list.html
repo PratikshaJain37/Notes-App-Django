@@ -12,6 +12,10 @@ Hey {{ request.user }}!
      <p>{{ note.id }} - <a href='{{ note.get_absolute_url }}'>{{ note.title }}</a></p>
 {% endfor %}
 
+<hr>
 
+<a href='create/'>
+     <button> Create A Note </button>
+ </a>
 
 {% endblock %}
